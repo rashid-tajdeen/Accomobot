@@ -15,8 +15,9 @@ class FaceRecognition:
             # Capture each frame from the webcam
             ret, frame = self.video_capture.read()
 
-            # Recognise faces in the frame
-            frame = self._recognise_faces(frame)
+            detected_location = self._detect_face(frame)
+            if detected_location:
+                frame = self._recognise_face(frame, detected_location)
 
             # Display the resulting frame
             cv2.imshow('Video Feed', frame)
@@ -52,33 +53,43 @@ class FaceRecognition:
         cv2.destroyAllWindows()
 
     @staticmethod
-    def _draw_rectangle(frame, name, top, right, bottom, left):
+    def _rect_area(top, right, bottom, left):
+        area = abs(top - bottom) * abs(left - right)
+        return area
+
+    @staticmethod
+    def _draw_rectangle(frame, name, detected_location):
+        (top, right, bottom, left) = detected_location
         # Draw a rectangle around the face and display the name
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.5, (255, 255, 255), 1)
 
-    def _recognise_faces(self, frame):
-        # Find all face locations and face encodings in the current frame
+    def _detect_face(self, frame):
+        # Find all face locations in the current frame
         detected_locations = face_recognition.face_locations(frame)
-        detected_encodings = face_recognition.face_encodings(frame, detected_locations)
 
+        dominant_location = None
+        prev_bounding_area = 0
         # Loop through each face found in the frame
-        for (top, right, bottom, left), detected_encoding in zip(detected_locations, detected_encodings):
+        for (top, right, bottom, left) in detected_locations:
+            bounding_area = self._rect_area(top, right, bottom, left)
+            if bounding_area > prev_bounding_area:
+                dominant_location = (top, right, bottom, left)
+                prev_bounding_area = bounding_area
 
-            name = "Unknown"
-            # Loop through every known face
-            for person, person_encoding in self.known_faces.items():
-                is_known = face_recognition.compare_faces([person_encoding], detected_encoding)[0]
-                if is_known:
-                    name = person
-                    break
-            self._draw_rectangle(frame, name, top, right, bottom, left)
+        return dominant_location
+
+    def _recognise_face(self, frame, detected_location):
+        detected_encoding = face_recognition.face_encodings(frame, [detected_location])[0]
+
+        name = "Unknown"
+        # Loop through every known face
+        for person, person_encoding in self.known_faces.items():
+            is_known = face_recognition.compare_faces([person_encoding], detected_encoding)[0]
+            if is_known:
+                name = person
+                break
+        self._draw_rectangle(frame, name, detected_location)
 
         return frame
-
-
-if __name__ == '__main__':
-    faces_dir = "../known_faces/"
-    recogniser = FaceRecognition(faces_dir)
-    recogniser.run()
