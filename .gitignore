@@ -1,0 +1,8 @@
+# IDE specific files
+.idea
+
+# Ignore facial images
+known_faces/**.jpg
+
+# Python cache
+__pycache__
