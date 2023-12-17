@@ -93,3 +93,9 @@ class FaceRecognition:
         self._draw_rectangle(frame, name, detected_location)
 
         return frame
+
+
+if __name__ == '__main__':
+    faces_dir = "../known_faces/"
+    recogniser = FaceRecognition(faces_dir)
+    recogniser.run()
