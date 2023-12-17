@@ -6,3 +6,6 @@ known_faces/**.jpg
 
 # Python cache
 __pycache__
+
+# Virtual Environment
+venv

@@ -17,6 +17,8 @@ class FaceRecognition:
         self.polling_rate = 0.008  # In milliseconds
         self.non_recognised_frames_limit = 3
         self.non_recognised_frames = 0
+        # Start service
+        self.run()
 
     def run(self):
         recogniser_thread = threading.Thread(target=self._detect_face, args=(), daemon=True)
@@ -48,9 +50,7 @@ class FaceRecognition:
                 result[person] = self._memorise_face(known_faces_dir + file)
         if result == {}:
             print("No faces to load")
-            exit(0)
-        else:
-            return result
+        return result
 
     @staticmethod
     def _memorise_face(image_path):
@@ -121,5 +121,4 @@ class FaceRecognition:
 
 if __name__ == '__main__':
     faces_dir = "../known_faces/"
-    recogniser = FaceRecognition(faces_dir)
-    recogniser.run()
+    FaceRecognition(faces_dir)

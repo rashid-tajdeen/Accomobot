@@ -1,5 +1,5 @@
 # HCIR_Project
-A interactive robot to assist incoming students find accommodation based on their preferences.
+An interactive robot to assist incoming students find accommodation based on their preferences.
 
 ## Getting Started
 
@@ -33,3 +33,31 @@ Install the requirements using
 ```shell
 pip install -r requirements.txt
 ```
+
+## Running modules
+
+### Face Recognition
+
+- Place a picture of yourself in the _known_faces_ directory with your name.
+  For example, _rashid.jpg_
+- From inside the source directory
+```shell
+cd src
+```
+- Run the module using the command
+```shell
+python3 faceRecognition.py
+```
+- A window pops up with the video stream and a labeled face.
+
+### Speech Recognition
+
+- From inside the source directory
+```shell
+cd src
+```
+- Run the module using the command
+```shell
+python3 speechRecognition.py
+```
+- Your speech will be printed on the console
