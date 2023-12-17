@@ -15,6 +15,8 @@ class FaceRecognition:
         self.detected_person = "Unknown"
         self.stop_flag = False
         self.polling_rate = 0.008  # In milliseconds
+        self.non_recognised_frames_limit = 3
+        self.non_recognised_frames = 0
 
     def run(self):
         recogniser_thread = threading.Thread(target=self._detect_face, args=(), daemon=True)
@@ -93,8 +95,14 @@ class FaceRecognition:
                         dominant_location = (top, right, bottom, left)
                         prev_bounding_area = bounding_area
 
-                self.detected_location = dominant_location
-                if self.detected_location:
+                if dominant_location is None:
+                    self.non_recognised_frames += 1
+
+                if (self.non_recognised_frames == self.non_recognised_frames_limit) or dominant_location:
+                    self.detected_location = dominant_location
+                    self.non_recognised_frames = 0
+
+                if dominant_location:
                     self._recognise_face()
             else:
                 time.sleep(self.polling_rate)
