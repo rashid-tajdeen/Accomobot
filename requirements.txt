@@ -1,2 +1,4 @@
 opencv-python
 face_recognition
+SpeechRecognition
+pyaudio
