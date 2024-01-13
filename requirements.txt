@@ -1,4 +1,12 @@
-opencv-python
-face_recognition
-SpeechRecognition
-pyaudio
+opencv-python==4.8.0.76
+face_recognition==1.3.0
+SpeechRecognition==3.10.1
+pyaudio==0.2.14
+
+qibullet==1.4.6
+
+numpy==1.24.4
+
+gtts==2.5.0
+
+playsound==1.3.0
