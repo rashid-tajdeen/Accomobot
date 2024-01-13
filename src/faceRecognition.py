@@ -12,13 +12,11 @@ class FaceRecognition:
         self.video_capture = None
         self.frame = None
         self.detected_location = None
-        self.detected_person = "Unknown"
+        self.detected_person = None
         self.stop_flag = False
         self.polling_rate = 0.008  # In milliseconds
         self.non_recognised_frames_limit = 3
         self.non_recognised_frames = 0
-        # Start service
-        self.run()
 
     def run(self):
         recogniser_thread = threading.Thread(target=self._detect_face, args=(), daemon=True)
@@ -28,7 +26,7 @@ class FaceRecognition:
             # Capture each frame from the webcam
             ret, self.frame = self.video_capture.read()
 
-            if self.detected_location:
+            if self.detected_location and not self.stop_flag:
                 self._draw_box()
                 self._label_box()
 
@@ -104,6 +102,8 @@ class FaceRecognition:
 
                 if dominant_location:
                     self._recognise_face()
+                else:
+                    self.detected_person = None
             else:
                 time.sleep(self.polling_rate)
 
@@ -121,4 +121,5 @@ class FaceRecognition:
 
 if __name__ == '__main__':
     faces_dir = "../known_faces/"
-    FaceRecognition(faces_dir)
+    fr = FaceRecognition(faces_dir)
+    fr.run()

@@ -1,41 +1,41 @@
+import os
+import sys
+import time
+
+from threading import Thread
+
 import speech_recognition
 
 
 class SpeechRecognition:
     def __init__(self):
         self.recogniser = speech_recognition.Recognizer()
-        self.audio = None
-        self.text = None
-        # Start service
-        self.run()
 
-    def run(self):
-        self.connect_microphone()
-        while True:
-            self.listen_to_speech()
-            self.print_text()
+    def listen(self):
+        audio = self._listen_to_speech()
+        text = self._speech_to_text(audio)
+        return text
 
-    def connect_microphone(self):
+    def _listen_to_speech(self):
         with speech_recognition.Microphone() as source:
             print("Using system default Microphone...")
-            self.recogniser.adjust_for_ambient_noise(source)  # Adjust for ambient noise
-
-    def listen_to_speech(self):
-        try:
+            self.recogniser.adjust_for_ambient_noise(source)
+            audio = self.recogniser.listen(source)
             print("Listening...")
-            # Using Google Web Speech API for recognition
-            with speech_recognition.Microphone() as source:
-                self.audio = self.recogniser.listen(source)
-            self.text = self.recogniser.recognize_google(self.audio)
+            return audio
+
+    def _speech_to_text(self, audio):
+        text = ""
+        try:
+            text = self.recogniser.recognize_google(audio)
         except speech_recognition.UnknownValueError:
             print("Sorry, could not understand audio.")
         except speech_recognition.RequestError as e:
             print(f"Request to Google Web Speech API failed; {e}")
-
-    def print_text(self):
-        print(self.text)
-        self.text = None
+        return text
 
 
 if __name__ == "__main__":
-    SpeechRecognition()
+    sr = SpeechRecognition()
+    text = sr.listen()
+    print(text)
