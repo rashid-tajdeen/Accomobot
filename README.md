@@ -16,7 +16,7 @@ cd HCIR_Project
 
 Have virtualenv installed using
 ```shell
-pip install virtualenv
+sudo apt install python3.8-venv
 ```
 
 Create a virtual env using
@@ -32,6 +32,12 @@ source venv/bin/activate
 Install the requirements using
 ```shell
 pip install -r requirements.txt
+```
+
+If an error is thrown for building wheel for pyaudio, try the below line
+and rerun installing requirements
+```shell
+sudo apt-get install portaudio19-dev
 ```
 
 ## Running modules
