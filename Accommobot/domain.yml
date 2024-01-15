@@ -1,0 +1,45 @@
+version: "3.1"
+
+intents:
+  - option_1
+  - option_2
+  - uni_1
+  - uni_2
+  - city
+  - uni
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  
+  
+
+  
+
+
+
+responses:
+  utter_ask:
+  - text: "Hey there! What type of room do you want?"
+
+  utter_reply_1:
+  - text: "Do you want the room near city or University?"
+
+  utter_reply_2:
+  - text: "List of dorms near city"
+
+  utter_reply_3:
+  - text: "Which uiniversity?"
+
+  utter_reply_4:
+  - text: "List of dorms near Bonn"
+
+  utter_reply_5:
+  - text: "List of dorms near Rhein-sieg"
+
+  utter_enjoy:
+  - text: "Enjoy Your Day"
+
+  utter_name:
+  - text: "My name is Acomobot" 
+

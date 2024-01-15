@@ -1,0 +1,40 @@
+version: "3.1"
+
+stories:
+
+- story: Search single room HBRS
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: option_1
+  - action: utter_reply_1
+  - intent: uni
+  - action: utter_reply_3
+  - intent: uni_2
+  - action: utter_reply_5
+  - action: utter_enjoy
+
+
+
+- story: Search single room Bonn
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: option_1
+  - action: utter_reply_1
+  - intent: uni
+  - action: utter_reply_3
+  - intent: uni_1
+  - action: utter_reply_4
+  - action: utter_enjoy
+
+
+- story: Search single room city
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: city
+  - action: utter_reply_2
+  - action: utter_enjoy
+
+
