@@ -25,6 +25,20 @@ nlu:
     - Hochschule Bonn-Rhein-sieg
     - Bonn-Rhein-Sieg
 
+- intent: skt
+  examples: |
+    - sankt augustin
+    - sankt-augustin
+
+- intent: rheinbach
+  examples: |
+    - rheinbach
+
+- intent: city
+  examples: |
+    - HBF
+    - city
+
 - intent: city
   examples: |
     - HBF

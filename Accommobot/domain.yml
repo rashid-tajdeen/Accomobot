@@ -7,6 +7,8 @@ intents:
   - uni_2
   - city
   - uni
+  - skt
+  - rheinbach
   - greet
   - goodbye
   - affirm
@@ -29,16 +31,22 @@ responses:
   - text: "List of dorms near city"
 
   utter_reply_3:
-  - text: "Which uiniversity?"
+  - text: "Which uiniversity Bonn-Rhein-Sieg or Uni Bonn?"
 
   utter_reply_4:
   - text: "List of dorms near Bonn"
 
   utter_reply_5:
-  - text: "List of dorms near Rhein-sieg"
+  - text: "Near sankt-augustin or rheinbach"
+
+  utter_reply_6:
+  - text: "List of dorms near sank-augustin: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/europaring-86-53757-sankt-augustin"
+  
+  utter_reply_7:
+  - text: "List of dorms near Rheinbach: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/keramikerstrasse-38-53359-rheinbach"
 
   utter_enjoy:
-  - text: "Enjoy Your Day"
+  - text: " Please apply here: https://www.studierendenwerk-bonn.de/en/accommodation and Enjoy Your Day"
 
   utter_name:
   - text: "My name is Acomobot" 

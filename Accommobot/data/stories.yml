@@ -2,7 +2,7 @@ version: "3.1"
 
 stories:
 
-- story: Search single room HBRS
+- story: Search single room HBRS skt
   steps:
   - intent: greet
   - action: utter_ask
@@ -12,6 +12,23 @@ stories:
   - action: utter_reply_3
   - intent: uni_2
   - action: utter_reply_5
+  - intent: skt
+  - action: utter_reply_6
+  - action: utter_enjoy
+
+
+- story: Search single room HBRS rhein
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: option_1
+  - action: utter_reply_1
+  - intent: uni
+  - action: utter_reply_3
+  - intent: uni_2
+  - action: utter_reply_5
+  - intent: rheinbach
+  - action: utter_reply_7
   - action: utter_enjoy
 
 
