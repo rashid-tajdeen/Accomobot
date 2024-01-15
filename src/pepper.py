@@ -52,6 +52,7 @@ class PepperRobot:
             listened_words = self.sr.listen()
             if listened_words != "":
                 print(self.talking_to, ":", listened_words)
+                self.bml.converse(listened_words)
 
 
 if __name__ == "__main__":

@@ -3,18 +3,32 @@
     <greet>
         <!-- Gesture: Wave with Right Hand -->
         <gesture id="gesture" start="0" end="3" lexeme="WAVE" mode="RIGHT_HAND" />
-        <gesture id="gesture" start="0" end="3" lexeme="WAVE" mode="LEFT_HAND" />
         <!-- Speech: "Hello, how can I help you?" -->
         <speech id="speech" start="1" text="Hello, how can I help you?" />
         <!-- Gaze: Looking at human -->
-        <gaze id="gaze" target="human_face" direction="UP" angle="-15" start="0" end="3" />
-        <!-- Head: Nodding from top to bottom -->
+        <gaze id="gaze" target="human_face" direction="UP" angle="-15" start="0"/>
     </greet>
 
-    <a>
-        <head id="head" start="4" lexeme="NOD" repetition="1" />
+    <converse>
+        <!-- Gesture: Wave with Right Hand -->
+        <gesture id="gesture" start="0" lexeme="CONVERSE" />
+        <!-- Speech: Text given as input -->
+        <speech id="speech" start="0" text="" />
+    </converse>
+
+    <nod_negative>
+        <!-- Head: Nodding from left to right -->
+        <head id="head" start="0" end="2" lexeme="NOD" angle="20" mode="NEGATIVE" repetition="3" />
+    </nod_negative>
+
+    <nod_positive>
+        <!-- Head: Nodding from top to bottom -->
+        <head id="head" start="0" end="2" lexeme="NOD" angle="15" mode="POSITIVE" repetition="2" />
+    </nod_positive>
+
+    <happy_swirl>
         <!-- Posture: Happy Swirl (this could be robot specific, but let's assume it's a twirling action) -->
-        <posture id="posture" start="5" lexeme="HAPPY_SWIRL" />
-    </a>
+        <posture id="posture" start="0" lexeme="HAPPY_SWIRL" />
+    </happy_swirl>
 
 </behaviours>
