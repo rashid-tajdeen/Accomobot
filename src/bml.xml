@@ -1,0 +1,20 @@
+<behaviours>
+
+    <greet>
+        <!-- Gesture: Wave with Right Hand -->
+        <gesture id="gesture" start="0" end="3" lexeme="WAVE" mode="RIGHT_HAND" />
+        <gesture id="gesture" start="0" end="3" lexeme="WAVE" mode="LEFT_HAND" />
+        <!-- Speech: "Hello, how can I help you?" -->
+        <speech id="speech" start="1" text="Hello, how can I help you?" />
+        <!-- Gaze: Looking at human -->
+        <gaze id="gaze" target="human_face" direction="UP" angle="-15" start="0" end="3" />
+        <!-- Head: Nodding from top to bottom -->
+    </greet>
+
+    <a>
+        <head id="head" start="4" lexeme="NOD" repetition="1" />
+        <!-- Posture: Happy Swirl (this could be robot specific, but let's assume it's a twirling action) -->
+        <posture id="posture" start="5" lexeme="HAPPY_SWIRL" />
+    </a>
+
+</behaviours>
