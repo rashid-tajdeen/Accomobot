@@ -2,11 +2,24 @@ version: "3.1"
 
 stories:
 
-- story: Search single room HBRS skt
+- story: Search room near uni bonn
   steps:
   - intent: greet
   - action: utter_ask
-  - intent: option_1
+  - intent: affirm
+  - action: utter_reply_1
+  - intent: uni
+  - action: utter_reply_3
+  - intent: uni_1
+  - action: utter_reply_unibonn
+  - action: utter_apply
+  - action: utter_enjoy
+
+- story: Search room HBRS skt
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: affirm
   - action: utter_reply_1
   - intent: uni
   - action: utter_reply_3
@@ -14,14 +27,15 @@ stories:
   - action: utter_reply_5
   - intent: skt
   - action: utter_reply_6
+  - action: utter_apply
   - action: utter_enjoy
 
 
-- story: Search single room HBRS rhein
+- story: Search room HBRS rhein
   steps:
   - intent: greet
   - action: utter_ask
-  - intent: option_1
+  - intent: affirm
   - action: utter_reply_1
   - intent: uni
   - action: utter_reply_3
@@ -29,29 +43,96 @@ stories:
   - action: utter_reply_5
   - intent: rheinbach
   - action: utter_reply_7
+  - action: utter_apply
   - action: utter_enjoy
 
 
-
-- story: Search single room Bonn
+- story: Search room near hbf
   steps:
   - intent: greet
   - action: utter_ask
-  - intent: option_1
+  - intent: affirm
   - action: utter_reply_1
-  - intent: uni
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_4
-  - action: utter_enjoy
-
-
-- story: Search single room city
-  steps:
-  - intent: greet
-  - action: utter_ask
   - intent: city
   - action: utter_reply_2
+  - intent: hbf
+  - action: utter_reply_4
+  - action: utter_apply
   - action: utter_enjoy
 
 
+- story: Search room out city near river
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: affirm
+  - action: utter_reply_1
+  - intent: city
+  - action: utter_reply_2
+  - intent: out
+  - action: utter_out_city
+  - intent: river
+  - action: utter_river
+  - action: utter_apply
+  - action: utter_enjoy
+
+- story: Search room north
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: affirm
+  - action: utter_reply_1
+  - intent: city
+  - action: utter_reply_2
+  - intent: out
+  - action: utter_out_city
+  - intent: north
+  - action: utter_north
+  - action: utter_apply
+  - action: utter_enjoy
+
+- story: Search room south
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: affirm
+  - action: utter_reply_1
+  - intent: city
+  - action: utter_reply_2
+  - intent: out
+  - action: utter_out_city
+  - intent: south
+  - action: utter_south
+  - action: utter_apply
+  - action: utter_enjoy
+
+- story: Search room in tabu
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: affirm
+  - action: utter_reply_1
+  - intent: city
+  - action: utter_reply_2
+  - intent: out
+  - action: utter_out_city
+  - intent: tabu
+  - action: utter_tabu
+  - action: utter_apply
+  - action: utter_enjoy
+
+
+- story: Search room in tabu
+  steps:
+  - intent: greet
+  - action: utter_ask
+  - intent: affirm
+  - action: utter_reply_1
+  - intent: city
+  - action: utter_reply_2
+  - intent: out
+  - action: utter_out_city
+  - intent: gronau
+  - action: utter_gronau
+  - action: utter_apply
+  - action: utter_enjoy

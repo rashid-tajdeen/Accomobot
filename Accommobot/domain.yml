@@ -1,18 +1,24 @@
 version: "3.1"
 
 intents:
-  - option_1
-  - option_2
   - uni_1
   - uni_2
-  - city
-  - uni
   - skt
   - rheinbach
+  - city
+  - hbf
+  - out
+  - river
+  - north
+  - south
+  - tabu
+  - gronau
+  - uni
   - greet
   - goodbye
   - affirm
   - deny
+  - bot_name
   
   
 
@@ -22,32 +28,77 @@ intents:
 
 responses:
   utter_ask:
-  - text: "Hey there! What type of room do you want?"
+  - text: "Hey there! I am Accommobot. Are you searching for a room?"
 
   utter_reply_1:
-  - text: "Do you want the room near city or University?"
+  - text: "Do you want the room in city or University?"
 
   utter_reply_2:
-  - text: "List of dorms near city"
+  - text: "Do you want the room near HBF or out side of city"
 
   utter_reply_3:
   - text: "Which uiniversity Bonn-Rhein-Sieg or Uni Bonn?"
 
   utter_reply_4:
-  - text: "List of dorms near Bonn"
+  - text: "List of dorms near HBF : 
+  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/newmanhaus-adenauerallee-63-53113-bonn 
+  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/endenicher-allee-17-53115-bonn"
 
   utter_reply_5:
   - text: "Near sankt-augustin or rheinbach"
 
   utter_reply_6:
-  - text: "List of dorms near sank-augustin: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/europaring-86-53757-sankt-augustin"
+  - text: "List of dorm near sank-augustin: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/europaring-86-53757-sankt-augustin"
   
   utter_reply_7:
-  - text: "List of dorms near Rheinbach: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/keramikerstrasse-38-53359-rheinbach"
+  - text: "List of dorm near Rheinbach: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/keramikerstrasse-38-53359-rheinbach"
+  
+  utter_reply_8:
+  - text: "List of dorms near city"
 
+  utter_apply:
+  - text: " Please apply here: https://www.studierendenwerk-bonn.de/en/accommodation "
+  
+  utter_out_city:
+  - text: "Which area do you prefer (Bonn-South, Bonn-North, Bonn-Tannenbusch, Near River or Bonn-Gronau)? "
+  
+  utter_river:
+  - text: "List of dorms near river.
+  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/roemerlager-am-jesuitenhof-1-3-53117-bonn
+  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/am-wichelshof-32-53111-bonn"
+
+  utter_north:
+  - text: "List of dorms near Bonn-North.
+  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/pariser-strasse-54-53117-bonn#1-4
+  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/im-krausfeld-16-53111-bonn"
+
+  utter_south:
+  - text: "List of dorms near Bonn-South.
+  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/bismarckstrasse-4-53113-bonn
+  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/kaiserstrasse-47-53113-bonn"
+
+  utter_tabu:
+  - text: "List of dorms near Bonn-Tannenbusch.
+  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/hirschberger-str-58-64-53119-bonn
+  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/posener-weg-oppelner-strasse-47-riesengebirgsstrasse-53119-bonn"
+
+  utter_gronau:
+  - text: "List of dorm near Bonn-Gronau.
+  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/augustinushaus-eduard-pflueger-strasse-56-53113-bonn"
+
+  utter_reply_unibonn:
+  - text: "List of dorms near Uni Bonn: 
+  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/jagdweg-18-22-53115-bonn
+  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/karlrobert-kreiten-strasse-7-11-53115-bonn
+  3. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/kirschallee-3a-3b-53115-bonn
+  4. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/sternenburgstrasse-45-53115-bonn
+  5. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/babette-koch-weg-1-2-53121-bonn
+  6. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/am-bleichgraben-2-6-53121-bonn
+  7. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/hermann-wandersleb-ring-6-53121-bonn
+  8. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/ulrich-haberland-haus-auf-dem-huegel-16-53121-bonn"
   utter_enjoy:
-  - text: " Please apply here: https://www.studierendenwerk-bonn.de/en/accommodation and Enjoy Your Day"
-
+  - text: "Enjoy your day."
+  
   utter_name:
   - text: "My name is Acomobot" 
 
