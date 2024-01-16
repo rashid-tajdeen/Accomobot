@@ -24,9 +24,9 @@ stories:
   - intent: uni
   - action: utter_reply_3
   - intent: uni_2
-  - action: utter_reply_5
+  - action: utter_reply_4
   - intent: skt
-  - action: utter_reply_6
+  - action: utter_reply_5
   - action: utter_apply
   - action: utter_enjoy
 
@@ -40,9 +40,9 @@ stories:
   - intent: uni
   - action: utter_reply_3
   - intent: uni_2
-  - action: utter_reply_5
+  - action: utter_reply_4
   - intent: rheinbach
-  - action: utter_reply_7
+  - action: utter_reply_6
   - action: utter_apply
   - action: utter_enjoy
 
@@ -56,7 +56,7 @@ stories:
   - intent: city
   - action: utter_reply_2
   - intent: hbf
-  - action: utter_reply_4
+  - action: utter_reply_hbf
   - action: utter_apply
   - action: utter_enjoy
 

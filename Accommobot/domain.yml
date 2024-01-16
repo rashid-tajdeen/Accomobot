@@ -40,24 +40,19 @@ responses:
   - text: "Which uiniversity Bonn-Rhein-Sieg or Uni Bonn?"
 
   utter_reply_4:
+  - text: "Near sankt-augustin or rheinbach"
+
+  utter_reply_5:
+  - text: "List of dorm near sank-augustin: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/europaring-86-53757-sankt-augustin"
+  
+  utter_reply_6:
+  - text: "List of dorm near Rheinbach: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/keramikerstrasse-38-53359-rheinbach"
+  
+  utter_reply_hbf:
   - text: "List of dorms near HBF : 
   1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/newmanhaus-adenauerallee-63-53113-bonn 
   2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/endenicher-allee-17-53115-bonn"
 
-  utter_reply_5:
-  - text: "Near sankt-augustin or rheinbach"
-
-  utter_reply_6:
-  - text: "List of dorm near sank-augustin: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/europaring-86-53757-sankt-augustin"
-  
-  utter_reply_7:
-  - text: "List of dorm near Rheinbach: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/keramikerstrasse-38-53359-rheinbach"
-  
-  utter_reply_8:
-  - text: "List of dorms near city"
-
-  utter_apply:
-  - text: " Please apply here: https://www.studierendenwerk-bonn.de/en/accommodation "
   
   utter_out_city:
   - text: "Which area do you prefer (Bonn-South, Bonn-North, Bonn-Tannenbusch, Near River or Bonn-Gronau)? "
@@ -96,6 +91,10 @@ responses:
   6. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/am-bleichgraben-2-6-53121-bonn
   7. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/hermann-wandersleb-ring-6-53121-bonn
   8. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/ulrich-haberland-haus-auf-dem-huegel-16-53121-bonn"
+  
+  utter_apply:
+  - text: " Please apply here: https://www.studierendenwerk-bonn.de/en/accommodation "
+  
   utter_enjoy:
   - text: "Enjoy your day."
   
