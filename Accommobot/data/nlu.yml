@@ -2,7 +2,6 @@ version: "3.1"
 
 nlu:
 
-
 - intent: uni_1
   examples: |
     - Bonn
@@ -24,59 +23,8 @@ nlu:
 - intent: rheinbach
   examples: |
     - rheinbach
+    - rhein
 
-- intent: city
-  examples: |
-    - city
-
-- intent: hbf
-  examples: |
-    - HBF
-    
-- intent: out 
-  examples: |
-    - out
-    - out side
-    - out side of the city
-
-- intent: river
-  examples: |
-    - river
-    - near river
-  
-- intent: north
-  examples: |
-    - north
-    - bonn north
-    - bonn-north
-
-- intent: south
-  examples: |
-    - south
-    - bonn south
-    - bonn-south
-
-- intent: tabu
-  examples: |
-    - tabu
-    - bonn tabu
-    - bonn tannenbusch
-    - tannenbusch
-    - bonn-tannenbusch
-
-- intent: gronau
-  examples: |
-    - Bonn-gronau
-    - gronau
-
-- intent: uni
-  examples: |
-    - uni
-    - University
-    - Hochschule
-    - college
-    - school
-    - versity
 
 - intent: greet
   examples: |
@@ -132,3 +80,64 @@ nlu:
     - your name
     - name
 
+- intent: single
+  examples: |
+    - single room
+    - single
+
+- intent: double
+  examples: |
+    - double room
+    - double
+
+- intent: shared
+  examples: |
+    - shared room
+    - shared
+
+- intent: renta
+  examples: |
+    - 200
+    - 300
+    - 400
+
+- intent: rentb
+  examples: |
+    - 450
+    - 550
+    - 600
+
+- intent: rentc
+  examples: |
+    - 650
+    - 750
+    - 700
+    - 800
+    - 850
+    - 900
+
+- intent: sizea
+  examples: |
+    - 10
+    - 12
+    - 13
+    - 14
+    - 16
+    - 15
+    - 17
+    - 18
+    - 19
+    - 20
+
+- intent: sizeb
+  examples: |
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
