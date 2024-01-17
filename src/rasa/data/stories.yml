@@ -2,388 +2,62 @@ version: "3.1"
 
 stories:
 
-- story: Search single room near uni bonn, renta,sizea
+# - story: dom choice
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: acceptance
+#   - action: utter_happy
+#   - intent: accomobot_
+#   - action: ask_University_name
+#   - intent: University_name
+#   - action: ask_price_range
+#   - intent: price_range
+#   - action: ask_prop_type
+#   - intent: Property_type
+#   - action: ask_room_size
+#   - intent: Room_size
+#   - action: ask_confirmation
+#   - intent: affirm
+#   - action: utter_dorm_list_confirmation
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+
+# Add story for selecting a dormitory
+- story:  selecting dormitory
   steps:
   - intent: greet
-  - action: utter_ask
-  - intent: single
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
+  - action: utter_greet
+  - intent: acceptance
+  - action: utter_lets_find_dom
+  - intent: acceptance
+  - action: utter_ask_University_name
+  - intent: University_name
+  - action: utter_ask_price_range
+  - intent: price_range
+  - action: utter_ask_prop_type
+  - intent: Property_type
+  - action: utter_ask_room_size
+  - intent: Room_size
+  - action: utter_ask_confirmation
+  - intent: acceptance
+  - action: utter_dorm_list_confirmation
+  - intent: Thanking
+  - action: utter_goodbye
 
-- story: Search shared room near uni bonn, renta,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: shared
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search double room near uni bonn, renta,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: double
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search single room near uni bonn, rentb,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: single
-  - action: utter_reply_1
-  - intent: rentb
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search shared room near uni bonn, rentb,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: shared
-  - action: utter_reply_1
-  - intent: rentb
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search double room near uni bonn, rentb,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: double
-  - action: utter_reply_1
-  - intent: rentb
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search single room near uni bonn, rentc,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: single
-  - action: utter_reply_1
-  - intent: rentc
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search shared room near uni bonn, rentc,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: shared
-  - action: utter_reply_1
-  - intent: rentc
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search double room near uni bonn, rentc,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: double
-  - action: utter_reply_1
-  - intent: rentc
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search single room near uni bonn, renta,sizeb
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: single
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizeb
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search shared room near uni bonn, renta,sizeb
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: shared
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizeb
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search double room near uni bonn, renta,sizeb
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: double
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizeb
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search single room near uni bonn, rentb,sizeab
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: single
-  - action: utter_reply_1
-  - intent: rentb
-  - action: utter_reply_2
-  - intent: sizeb
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search shared room near uni bonn, rentb,sizeb
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: shared
-  - action: utter_reply_1
-  - intent: rentb
-  - action: utter_reply_2
-  - intent: sizeb
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search double room near uni bonn, renta,sizeb
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: double
-  - action: utter_reply_1
-  - intent: rentb
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search single room near uni bonn, rentc,sizeb
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: single
-  - action: utter_reply_1
-  - intent: rentc
-  - action: utter_reply_2
-  - intent: sizeb
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search shared room near uni bonn, rentc,sizeb
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: shared
-  - action: utter_reply_1
-  - intent: rentc
-  - action: utter_reply_2
-  - intent: sizeb
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-- story: Search double room near uni bonn, rentc,sizeb
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: double
-  - action: utter_reply_1
-  - intent: rentc
-  - action: utter_reply_2
-  - intent: sizeb
-  - action: utter_reply_3
-  - intent: uni_1
-  - action: utter_reply_unibonn_s
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search single room near hbrs skt, renta,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: single
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_2
-  - action: utter_reply_4
-  - intent: skt
-  - action: utter_reply_5
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-
-- story: Search shared room near hbrs skt, renta,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: shared
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_2
-  - action: utter_reply_4
-  - intent: skt
-  - action: utter_reply_5
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search double room near hbrs skt, renta,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: double
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_2
-  - action: utter_reply_4
-  - intent: skt
-  - action: utter_reply_5
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search single room near hbrs rhin, renta,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: single
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_2
-  - action: utter_reply_4
-  - intent: rheinbach
-  - action: utter_reply_6
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-
-- story: Search shared room near hbrs rhin, renta,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: shared
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_2
-  - action: utter_reply_4
-  - intent: rheinbach
-  - action: utter_reply_6
-  - action: utter_apply
-  - action: utter_enjoy
-
-
-- story: Search double room near hbrs rhin, renta,sizea
-  steps:
-  - intent: greet
-  - action: utter_ask
-  - intent: double
-  - action: utter_reply_1
-  - intent: renta
-  - action: utter_reply_2
-  - intent: sizea
-  - action: utter_reply_3
-  - intent: uni_2
-  - action: utter_reply_4
-  - intent: rheinbach
-  - action: utter_reply_6
-  - action: utter_apply
-  - action: utter_enjoy
+# # Add story for using abusive lanuage
+# - story:  using abusive lanuage
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: acceptance
+#   - action: Lets_find_dom
+#   - intent: acceptance
+#   - action: ask_University_name
+#   - intent: University_name
+#   - action: ask_price_range
+#   - intent: bad_words
+#   - action: utter_bad_words_response
+#   - intent: bad_words
+#   - action: utter_goodbye

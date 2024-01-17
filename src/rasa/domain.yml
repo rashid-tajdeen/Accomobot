@@ -1,72 +1,75 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - uni_1
-  - uni_2
-  - skt
-  - rheinbach
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - bot_name
-  - single
-  - double
-  - shared
-  - renta
-  - rentb
-  - rentc
-  - sizea
-  - sizeb
-  
-
-  
-
-
-
+- Property_type
+- Room_size
+- University_name
+- acceptance
+- accomobot_
+- affirm
+- bad_words
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- Thanking
+- price_range
 responses:
-  utter_ask:
-  - text: "Hey there! I am Accommobot. Are you searching for a single, double or shared apartment?"
-
-
-  utter_reply_1:
-  - text: "What will be the rent you want?"
-
-  utter_reply_2:
-  - text: "What will be the room size in square maters?"
-
-  utter_reply_3:
-  - text: "Which uiniversity Bonn-Rhein-Sieg or Uni Bonn?"
-
-  utter_reply_4:
-  - text: "Near sankt-augustin or rheinbach"
-
-  utter_reply_5:
-  - text: "List of dorm near sank-augustin: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/europaring-86-53757-sankt-augustin"
-  
-  utter_reply_6:
-  - text: "List of dorm near Rheinbach: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/keramikerstrasse-38-53359-rheinbach"
-  
-
-  utter_reply_unibonn_s:
-  - text: "List of dorms near Uni Bonn: 
-  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/babette-koch-weg-1-2-53121-bonn
-  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/am-bleichgraben-2-6-53121-bonn
-  3. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/hermann-wandersleb-ring-6-53121-bonn
-  4. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/ulrich-haberland-haus-auf-dem-huegel-16-53121-bonn"
-  
-  utter_reply_unibonn:
-  - text: "List of dorms near Uni Bonn: 
-  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/jagdweg-18-22-53115-bonn
-  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/karlrobert-kreiten-strasse-7-11-53115-bonn
-  3. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/kirschallee-3a-3b-53115-bonn"
-
-  utter_apply:
-  - text: " Please apply here: https://www.studierendenwerk-bonn.de/en/accommodation "
-  
-  utter_enjoy:
-  - text: "Enjoy your day."
-  
-  utter_name:
-  - text: "My name is Accommobot" 
-
+  utter_greet:
+  - text: Can I help you to find the dormitory of your choice?
+  - text: I am Accomobot. I can help you to find the dormitory of your choice. Find your home away from home with my help.
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+  - text: It is a beautiful day today for a walk. I can't but you can :)
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: I hope that helped you
+  - text: was that helpful?
+  - text: I hope we found your dormitory of choice
+  - text: I hope we found your home away from home
+  utter_happy:
+  - text: I am glad that you selected my service
+  - text: I am glad that you selected my service. I am always here to help you
+  utter_goodbye:
+  - text: Bye
+  - text: Bye bye
+  - text: Bye. Hope you enjoy the dormitory which you have selected
+  - text: Sayanora
+  - text: Bis spater
+  - text: See you later
+  - text: See you later. Hope you enjoy the dormitory which you have selected
+  - text: Arigatho gozaimasu
+  - text: Nanri
+  utter_iamabot:
+  - text: I am an Accomodation bot, powered by Rasa.
+  - text: I am a bot, powered by Rasa. I am here to help you to find the dormitory of your choice
+  utter_ask_University_name:
+  - text: Sure! Can I know your University name?
+  - text: What is your University name?
+  - text: Which university are you to studying in?
+  utter_ask_price_range:
+  - text: Nice! So, What is your budget?
+  - text: What is your price range?
+  - text: which price range are you looking for?
+  utter_ask_prop_type:
+  - text: That is a good choice, What type of property are you looking for?
+  - text: What type of property do you want?
+  - text: What type of property do you prefer?
+  utter_ask_room_size:
+  - text: Intresting! Finally, What size of room are you looking for?
+  - text: What size of room do you want?
+  - text: What size of room do you prefer?
+  - text: What size of room are you looking for? upto 20 meter square?
+  - text: What size of room do you want? upto 30 meter square?
+  utter_ask_confirmation:
+  - text: Are you sure about your choices?
+  utter_dorm_list_confirmation:
+  - text: Here is the list of dormitories which matches your choices
+  utter_bad_words_response:
+  - text: Sorry! I didn't get you. Can you please rephrase your sentence?
+  utter_lets_find_dom:
+  - text: Let's find your dormitory of choice
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
