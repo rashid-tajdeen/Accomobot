@@ -1,0 +1,134 @@
+version: "3.1"
+
+nlu:
+
+
+- intent: uni_1
+  examples: |
+    - Bonn
+    - University of Bonn
+    - Uni bonn
+
+- intent: uni_2
+  examples: |
+    - HBRS
+    - Bonn-Rhein-Sieg University of Applied Sicence
+    - Hochschule Bonn-Rhein-sieg
+    - Bonn-Rhein-Sieg
+
+- intent: skt
+  examples: |
+    - sankt augustin
+    - sankt-augustin
+
+- intent: rheinbach
+  examples: |
+    - rheinbach
+
+- intent: city
+  examples: |
+    - city
+
+- intent: hbf
+  examples: |
+    - HBF
+    
+- intent: out 
+  examples: |
+    - out
+    - out side
+    - out side of the city
+
+- intent: river
+  examples: |
+    - river
+    - near river
+  
+- intent: north
+  examples: |
+    - north
+    - bonn north
+    - bonn-north
+
+- intent: south
+  examples: |
+    - south
+    - bonn south
+    - bonn-south
+
+- intent: tabu
+  examples: |
+    - tabu
+    - bonn tabu
+    - bonn tannenbusch
+    - tannenbusch
+    - bonn-tannenbusch
+
+- intent: gronau
+  examples: |
+    - Bonn-gronau
+    - gronau
+
+- intent: uni
+  examples: |
+    - uni
+    - University
+    - Hochschule
+    - college
+    - school
+    - versity
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_name
+  examples: |
+    - your name
+    - name
+
