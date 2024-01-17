@@ -8,6 +8,7 @@ from speechRecognition import SpeechRecognition
 from bmlRealizer import BmlRealizer
 from rasaBot import MyRasa
 from bayesian import MyBayesian
+from constants import *
 
 
 class PepperRobot:
@@ -54,15 +55,35 @@ class PepperRobot:
         self._respond(greet)
 
     def keep_talking(self):
+        count = 0
         while True:
             listened_words = self.sr.listen()
             if listened_words != "":
                 print(self.talking_to, ":", listened_words)
                 response = self.myRasa.process(listened_words)
                 self._respond(response)
+                count += 1
+                if count == 9:
+                    break
+        self._ask_for_preferences()
 
-                # Break here based on final response
-        myBayesian = MyBayesian(0, 0, 0, 0)
+    def _ask_for_preferences(self):
+        parameters = {}
+        parameters["rent_range"] = rent_range
+        parameters["room_size"] = room_size
+        parameters["property_type"] = property_type
+        parameters["university"] = university
+        result = []
+        for att, value in parameters.items():
+            print(f'\nEnter your preference for {att} from the options below :')
+            for idx, val in enumerate(value):
+                print(f'{idx + 1}. {val}')
+            result.append(int(input("Please specify the index for the options above : ")))
+
+        myBayesian = MyBayesian(result[0] - 1,
+                                result[1] - 1,
+                                result[2] - 1,
+                                result[3] - 1)
         myBayesian.run()
 
     def _respond(self, response):

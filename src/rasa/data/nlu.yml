@@ -99,6 +99,7 @@ nlu:
   examples: |
     - Less than 400 Euros
     - Under 500 Euros
+    - Under four hundred Euros
     - Between 200 and 400 Euros
     - under 300 Euros
     - Above 200 Euros, but less than 400 Euros
@@ -147,7 +148,8 @@ nlu:
     - less than 30 msq
     - between 10 to 20 msq
     - how about 10 - 20 sqm
-    - 10 to 20
+    - ten to twenty
+    - below twenty meter square
     - I would prefer 10 -20
     - 10 - 20 is pretty good for me
     - 20 - 30 sqm
