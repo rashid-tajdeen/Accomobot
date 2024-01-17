@@ -1,0 +1,72 @@
+version: "3.1"
+
+intents:
+  - uni_1
+  - uni_2
+  - skt
+  - rheinbach
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_name
+  - single
+  - double
+  - shared
+  - renta
+  - rentb
+  - rentc
+  - sizea
+  - sizeb
+  
+
+  
+
+
+
+responses:
+  utter_ask:
+  - text: "Hey there! I am Accommobot. Are you searching for a single, double or shared apartment?"
+
+
+  utter_reply_1:
+  - text: "What will be the rent you want?"
+
+  utter_reply_2:
+  - text: "What will be the room size in square maters?"
+
+  utter_reply_3:
+  - text: "Which uiniversity Bonn-Rhein-Sieg or Uni Bonn?"
+
+  utter_reply_4:
+  - text: "Near sankt-augustin or rheinbach"
+
+  utter_reply_5:
+  - text: "List of dorm near sank-augustin: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/europaring-86-53757-sankt-augustin"
+  
+  utter_reply_6:
+  - text: "List of dorm near Rheinbach: https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/keramikerstrasse-38-53359-rheinbach"
+  
+
+  utter_reply_unibonn_s:
+  - text: "List of dorms near Uni Bonn: 
+  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/babette-koch-weg-1-2-53121-bonn
+  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/am-bleichgraben-2-6-53121-bonn
+  3. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/hermann-wandersleb-ring-6-53121-bonn
+  4. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/ulrich-haberland-haus-auf-dem-huegel-16-53121-bonn"
+  
+  utter_reply_unibonn:
+  - text: "List of dorms near Uni Bonn: 
+  1. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/jagdweg-18-22-53115-bonn
+  2. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/karlrobert-kreiten-strasse-7-11-53115-bonn
+  3. https://www.studierendenwerk-bonn.de/en/accommodation/our-dormitories/dormitory/kirschallee-3a-3b-53115-bonn"
+
+  utter_apply:
+  - text: " Please apply here: https://www.studierendenwerk-bonn.de/en/accommodation "
+  
+  utter_enjoy:
+  - text: "Enjoy your day."
+  
+  utter_name:
+  - text: "My name is Accommobot" 
+
