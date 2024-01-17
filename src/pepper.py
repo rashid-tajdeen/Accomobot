@@ -7,6 +7,7 @@ from faceRecognition import FaceRecognition
 from speechRecognition import SpeechRecognition
 from bmlRealizer import BmlRealizer
 from rasaBot import MyRasa
+from bayesian import MyBayesian
 
 
 class PepperRobot:
@@ -59,6 +60,10 @@ class PepperRobot:
                 print(self.talking_to, ":", listened_words)
                 response = self.myRasa.process(listened_words)
                 self._respond(response)
+
+                # Break here based on final response
+        myBayesian = MyBayesian(0, 0, 0, 0)
+        myBayesian.run()
 
     def _respond(self, response):
         self.bml.converse(response)
