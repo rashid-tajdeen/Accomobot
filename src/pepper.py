@@ -6,6 +6,7 @@ import time
 from faceRecognition import FaceRecognition
 from speechRecognition import SpeechRecognition
 from bmlRealizer import BmlRealizer
+from rasaBot import MyRasa
 
 
 class PepperRobot:
@@ -14,6 +15,8 @@ class PepperRobot:
         simulation_manager = SimulationManager()
         client = simulation_manager.launchSimulation(gui=True)
         self.pepper = simulation_manager.spawnPepper(client, spawn_ground_plane=True)
+
+        self.myRasa = MyRasa()
 
         self.faces_dir = "../known_faces/"
         self.talking_to = None
@@ -46,17 +49,23 @@ class PepperRobot:
         if person == "Unknown":
             person = ""
         self.bml.greet(person)
+        greet = self.myRasa.process("Hi")
+        self._respond(greet)
 
-    def respond(self):
+    def keep_talking(self):
         while True:
             listened_words = self.sr.listen()
             if listened_words != "":
                 print(self.talking_to, ":", listened_words)
-                self.bml.converse(listened_words)
+                response = self.myRasa.process(listened_words)
+                self._respond(response)
+
+    def _respond(self, response):
+        self.bml.converse(response)
 
 
 if __name__ == "__main__":
     pepperRobot = PepperRobot()
     pepperRobot.wait_for_person()
-    pepperRobot.respond()
+    pepperRobot.keep_talking()
 

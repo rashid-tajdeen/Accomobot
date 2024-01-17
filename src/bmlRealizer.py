@@ -25,7 +25,7 @@ class BmlRealizer:
         with open(self.bml_file) as fd:
             greet = xmltodict.parse(fd.read())["behaviours"]["greet"]
         if person:
-            greet["speech"]["@text"] = "Hello " + person + ", how can I help you?"
+            greet["speech"]["@text"] = "Hello " + person
         self._realize(greet)
 
     def nod_negative(self):

@@ -67,3 +67,28 @@ cd src
 python3 speechRecognition.py
 ```
 - Your speech will be printed on the console
+
+### Speech Recognition
+
+#### Installing Rasa
+
+```shell
+pip3 install --upgrade pip
+pip3 install rasa==3.6.15
+```
+
+#### Training Rasa
+
+```shell
+cd src/rasa
+python3.8 -m rasa train
+```
+
+## Usage
+
+Run the application using
+
+```shell
+cd src
+python3 pepper.py
+```
