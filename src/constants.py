@@ -1,13 +1,21 @@
-rent_range = ['Between_200_400',
-              'Between_400_600',
-              'Between_600_900']
+# Inputs to be selected by RASA --------------------------------------------
 
-room_size = ['10-20sqMeter',
-             '20-30sqMeter']
+rent_range = ['200 to 400 Euros',
+              '400 to 600 Euros',
+              '600 to 900 Euros']
 
-property_type = ['Single_room',
+room_size = ['10 to 20 square meter',
+             '20 to 30 square meter']
+
+property_type = ['Single Room',
                  'Apartment',
-                 'Differently_Abled_Friendly_Apartment']
+                 'Shared Appartment']
+
+university = ['HBRS Sankt Augustin',
+              'HBRS Rheinbach',
+              'University of Bonn']
+
+# Parameters for internal computations --------------------------------------
 
 dorm = ['WOHNHEIM AM RÖMERLAGER',
         'WOHNHEIM AM WICHELSHOF',
@@ -20,12 +28,8 @@ dorm = ['WOHNHEIM AM RÖMERLAGER',
         'WOHNHEIM KIRSCHALLEE 3A/B',
         'WOHNHEIM POSENER WEG']
 
-university = ['HBRS_Sankt_Augustin',
-              'HBRS_Rheinbach',
-              'Uni_bonn']
-
-match = ["YES",
-         "NO"]
+match = ["Yea",
+         "No"]
 
 vacancy = ['Vacant',
            'Non Vacant']
