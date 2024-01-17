@@ -77,7 +77,7 @@ class MyBayesian:
         bn_dorm = self.bn.idFromName("dorm")
         self.bn.addArc(bn_dorm, bn_match)
         self.bn.addArc(bn_university, bn_match)
-        self.bn.cpt(bn_university).fillWith([0.35, 0.35, 0.30])
+        self.bn.cpt(bn_university).fillWith([0.35, 0.20, 0.45])
 
         for d in range(len(dorm)):
             for uni in range(len(university)):
@@ -96,7 +96,7 @@ class MyBayesian:
                             'dorm': d})
             ie.makeInference()
             match_posterior.append(ie.posterior(bn_match).tolist()[0])  # taking only "yes" cases
-        self.match_posterior = [float(elem)/sum(match_posterior) for elem in match_posterior]
+        self.match_posterior = match_posterior
 
     def _init_vacancy_step(self):
         bn_vacancy = self._add_to_bn('vacancy', vacancy)
@@ -124,6 +124,7 @@ class MyBayesian:
         self.vacancy_posterior = [float(elem)/sum(vacancy_posterior) for elem in vacancy_posterior]
 
     def print_result(self):
+        print("")
         print("###########################################################")
         print("List of Dorms matched and ordered based on your preferences")
         print("###########################################################")
