@@ -1,47 +1,15 @@
 version: "3.1"
-
 nlu:
-
-- intent: uni_1
-  examples: |
-    - Bonn
-    - University of Bonn
-    - Uni bonn
-
-- intent: uni_2
-  examples: |
-    - HBRS
-    - Bonn-Rhein-Sieg University of Applied Sicence
-    - Hochschule Bonn-Rhein-sieg
-    - Bonn-Rhein-Sieg
-
-- intent: skt
-  examples: |
-    - sankt augustin
-    - sankt-augustin
-
-- intent: rheinbach
-  examples: |
-    - rheinbach
-    - rhein
-
-
 - intent: greet
   examples: |
     - hey
     - hello
     - hi
     - hello there
-    - good morning
-    - good evening
     - moin
     - hey there
     - let's go
     - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
 
 - intent: goodbye
   examples: |
@@ -56,14 +24,40 @@ nlu:
     - bye bye
     - see you later
 
-- intent: affirm
+- intent: Thanking
+  examples: |
+    - thanks
+    - thank you
+    - thank you so much
+    - thanks bot
+    - thanks for that
+    - cheers
+    - cheers bro
+    - ok thanks!
+
+- intent: acceptance
   examples: |
     - yes
     - y
+    - yep
+    - yeah
     - indeed
-    - of course
-    - that sounds good
-    - correct
+    - sure, lets begin
+    - ok
+    - great
+    - sure
+    - good
+    - sounds good
+    - fine
+    - cool
+
+# - intent: affirm
+#   examples: |
+#     - those are my choices
+#     - I like these preferences
+#     - this is what I want
+#     - yes - I want on these preferences
+#     - sure
 
 - intent: deny
   examples: |
@@ -74,70 +68,109 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nah
+    - nope
+    - I am not sure
 
-- intent: bot_name
+- intent: bot_challenge
   examples: |
-    - your name
-    - name
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
 
-- intent: single
+- intent: University_name
   examples: |
-    - single room
-    - single
+    - Hochschule Bonn-Rhein-Seig Sankt Augustin
+    - HBRS Sankt Augustin
+    - University of Bonn-Rhein-Seig Sankt Augustin
+    - Sankt Augustin
+    - HBRS Rheinbach
+    - University of Bonn-Rhein-Seig Rheinbach
+    - Hochschule Bonn-Rhein-Seig Rheinbach
+    - Rheinbach
+    - University of Bonn
+    - Bonn
+    - Uni Bonn
+    - Bonn Zentrum
+    - University of Bonn Zentrum
 
-- intent: double
+- intent: price_range
   examples: |
-    - double room
-    - double
+    - Less than 400 Euros
+    - Under 500 Euros
+    - Between 200 and 400 Euros
+    - under 300 Euros
+    - Above 200 Euros, but less than 400 Euros
+    - below 400 Euros
+    - in between 200 and 400 Euros
+    - above 200 Euros, but below 400 Euros
+    - Less than 600 Euros
+    - Between 400 and 600 Euros
+    - Above 400 Euros, but less than 600 Euros
+    - below 600 Euros
+    - in between 400 and 600 Euros
+    - above 400 Euros, but below 600 Euros
+    - Less than 900 Euros
+    - Between 600 and 900 Euros
+    - under 700 Euros
+    - Above 600 Euros, but less than 900 Euros
+    - below 900 Euros
+    - in between 600 and 900 Euros
+    - above 600 Euros, but below 900 Euros
 
-- intent: shared
+- intent: Property_type
   examples: |
-    - shared room
-    - shared
+    - Single room
+    - I would like to have a single room
+    - Single room would be fine, I guess
+    - for sure single room
+    - please search for a single room
+    - please apply filters for single room
+    - Apartment
+    - I would like to have an apartment
+    - Apartment would be fine, I guess
+    - for sure apartment
+    - please search for an apartment
+    - please apply filters for apartment
+    - Double Apartment
+    - I would like to have a double apartment
+    - Double apartment would be fine, I guess
+    - for sure double apartment
+    - please search for a double apartment
+    - please apply filters for double apartment
 
-- intent: renta
+- intent: Room_size
   examples: |
-    - 200
-    - 300
-    - 400
+    - 10-20 sqm
+    - less than 20 msq
+    - less than 30 msq
+    - between 10 to 20 msq
+    - how about 10 - 20 sqm
+    - 10 to 20
+    - I would prefer 10 -20
+    - 10 - 20 is pretty good for me
+    - 20 - 30 sqm
+    - how about 20 - 30 sqm
+    - 20 to 30
+    - I would prefer 20 -30
+    - 20 - 30 is pretty good for me
 
-- intent: rentb
+- intent: bad_words
   examples: |
-    - 450
-    - 550
-    - 600
+    - What the fuck?
+    - fuck
+    - bitch
+    - you are a bitch
+    - you are totally acting like a scumbag
+    - respond to me idiot
+    - how stupid are you
+    - are you insane
 
-- intent: rentc
+- intent: accomobot_
   examples: |
-    - 650
-    - 750
-    - 700
-    - 800
-    - 850
-    - 900
-
-- intent: sizea
-  examples: |
-    - 10
-    - 12
-    - 13
-    - 14
-    - 16
-    - 15
-    - 17
-    - 18
-    - 19
-    - 20
-
-- intent: sizeb
-  examples: |
-    - 21
-    - 22
-    - 23
-    - 24
-    - 25
-    - 26
-    - 27
-    - 28
-    - 29
-    - 30
+    - Can you help me finding a dom?
+    - can u find a dom
+    - is there any dom availabe near my university
+    - lets find a dom
+    - find a dormitory
